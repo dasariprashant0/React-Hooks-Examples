@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./Nav";
-import Callback from "./component/Callback";
-import Context from "./component/Context";
-import Effect from "./component/Effect";
+import Callback from "./component/useCallback";
+import Context from "./component/UseContext/useContext";
+import Effect from "./component/UseEffect/useEffect";
 import LayoutEffect from "./component/LayoutEffect";
 import Memo from "./component/Memo";
-import Reducer from "./component/Reducer";
+import Reducer from "./component/UseReducer/useReducer";
 import Ref from "./component/Ref";
-import State from "./component/State";
+import State from "./component/UseState/useState";
 import Home from "./component/Home";
 
 function App() {

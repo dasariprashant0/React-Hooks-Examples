@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Effect2 from "./useEffect2";
 
 const Effect = () => {
   const [time, setTime] = useState(new Date());
@@ -11,11 +12,15 @@ const Effect = () => {
   }, [time]);
 
   return (
-    <h1>
-      UseEffect Hook Example:
-      <br />
-      {time.toLocaleTimeString()}
-    </h1>
+    <div>
+      <Effect2 />
+      <h1>
+        UseEffect Hook Example:
+        <center>
+        {time.toLocaleTimeString()}
+        </center>
+      </h1>
+    </div>
   );
 };
 

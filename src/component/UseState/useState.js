@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import StateHook from "./State2";
+import StateHook from "./useState2";
 
 const State = () => {
   const [isGreen, setIsGreen] = useState(true);

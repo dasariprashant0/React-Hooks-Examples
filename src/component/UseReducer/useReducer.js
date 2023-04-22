@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import Reducer2 from "./Reducer2";
+import Reducer2 from "./useReducer2";
 
 const Reducer = () => {
   function counterReducer(state, action) {
