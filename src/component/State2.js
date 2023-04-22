@@ -18,7 +18,7 @@ const State2 = () => {
       bars.push(
         <div
           style={{
-            backgroundColor: "rgba(212,113,211,0.3)",
+            backgroundColor: "rgba(247, 134, 4, 0.733)",
             height: "100%",
             width: "10%",
           }}
@@ -32,7 +32,7 @@ const State2 = () => {
       <h1>useState Hook Example2: </h1>
       <div
         style={{
-          border: "0.1rem solid rgba(0,0,0,0.3",
+          border: "0.1rem solid rgba(255,255,255,0.6",
           height: "100px",
           width: "80%",
           margin: "2rem auto",

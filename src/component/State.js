@@ -10,8 +10,8 @@ const State = () => {
       >
         UseState Hook Example
         <br />
-        <button onClick={() => setIsGreen(!isGreen)}>Click Me</button>
       </h1>
+      <button onClick={() => setIsGreen(!isGreen)}>Click Me</button>
       <br />
       <br />
       <StateHook />

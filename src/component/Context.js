@@ -8,6 +8,7 @@ const Context = () => {
     const user = useContext(UserContext);
     return (
       <div>
+        <h1>useContext Hook Example:</h1>
         <p>Name: {user.name}</p>
         <p>Email: {user.email}</p>
       </div>

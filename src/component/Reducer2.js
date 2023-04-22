@@ -27,7 +27,7 @@ const Reducer2 = () => {
   const [{ r, g, b }, dispatch] = useReducer(reducer, { r: 0, g: 0, b: 0 });
   return (
     <div>
-      <h1 style={{ color: `rgb(${r},${g},${b})` }}>
+      <h1  style={{ color: `rgb(${r},${g},${b})` }}>
         useReducer Hook Example2:
       </h1>
       <div>
