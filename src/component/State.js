@@ -1,15 +1,21 @@
 import React, { useState } from "react";
+import StateHook from "./State2";
 
 const State = () => {
   const [isGreen, setIsGreen] = useState(true);
   return (
-    <h1
-      style={{ color: isGreen ? "lightgreen" : "crimson", cursor: "pointer" }}
-    >
-      UseState Hook Example
+    <div>
+      <h1
+        style={{ color: isGreen ? "lightgreen" : "crimson", cursor: "pointer" }}
+      >
+        UseState Hook Example
+        <br />
+        <button onClick={() => setIsGreen(!isGreen)}>Click Me</button>
+      </h1>
       <br />
-      <button onClick={() => setIsGreen(!isGreen)}>Click Me</button>
-    </h1>
+      <br />
+      <StateHook />
+    </div>
   );
 };
 
