@@ -5,7 +5,7 @@ export default function Nav() {
   const navigate = useNavigate();
   return (
     <nav>
-      <h1>React Hooks Examples</h1>
+      <h1>React Hooks App</h1>
       <select value={pathname} onChange={(e) => navigate(e.target.value)}>
         <option value="/">Home</option>
         <option value="/useState">useState</option>

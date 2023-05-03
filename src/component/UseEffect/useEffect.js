@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Effect2 from "./useEffect2";
+import Effect3 from "./useEffect3";
 
 const Effect = () => {
   const [time, setTime] = useState(new Date());
@@ -13,13 +14,15 @@ const Effect = () => {
 
   return (
     <div>
-      <Effect2 />
       <h1>
         UseEffect Hook Example:
         <center>
         {time.toLocaleTimeString()}
         </center>
       </h1>
+      <Effect2 />
+      <br />
+      <Effect3 />
     </div>
   );
 };

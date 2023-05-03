@@ -4,44 +4,41 @@ import axios from "axios";
 const Effect2 = () => {
   const [shownStatement, setShownStatement] = useState(false);
   const [boxPicked, setBoxPicked] = useState(0);
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState('');
 
   useEffect(() => {
     setTimeout(() => {
       setShownStatement(true);
-    }, 2000);
+    }, 1000);
   }, []);
 
   useEffect(() => {
     if (boxPicked === 0) {
       setImage("");
     } else {
-      fetchIamge(boxPicked);
+      fetchImage(boxPicked);
     }
-  });
+  }, [boxPicked]);
 
-  const fetchIamge = async (boxId) => {
+  const fetchImage = async (boxId) => {
     if (boxId === 1) {
       const response = await axios.get(
         "https://randomfox.ca/floof/?ref=apilist.fun"
       );
+      console.log(response.data);
       setImage(response.data.image);
     } else if (boxId === 2) {
       const response = await axios.get(
-        "https://aws.random.cat/meow?ref=apilist.fun"
-      );
-      setImage(response.data.file);
-    } else if (boxId === 3) {
-      const response = await axios.get(
         "https://dog.ceo/api/breeds/image/random"
       );
-      setImage(response.data.image);
+      console.log(response.data);
+      setImage(response.data.message);
     }
   };
 
   return (
     <div>
-      <h1>useEffect2 Hook Example2: </h1>
+      <h1>useEffect Hook Example2: </h1>
       <div>
         {shownStatement && (
           <>
@@ -50,25 +47,18 @@ const Effect2 = () => {
               <div
                 id="1"
                 className="box"
-                onClick={(e) => setBoxPicked(parseInt(e.target.id))}
+                onClick={(e) => setBoxPicked(parseInt(e.currentTarget.id))}
               >
                 <h2>1</h2>
               </div>
               <br />
+              
               <div
                 id="2"
                 className="box"
-                onClick={(e) => setBoxPicked(parseInt(e.target.id))}
+                onClick={(e) => setBoxPicked(parseInt(e.currentTarget.id))}
               >
                 <h2>2</h2>
-              </div>
-              <br />
-              <div
-                id="3"
-                className="box"
-                onClick={(e) => setBoxPicked(parseInt(e.target.id))}
-              >
-                <h2>3</h2>
               </div>
             </div>
           </>
